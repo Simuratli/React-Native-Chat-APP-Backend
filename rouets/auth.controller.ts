@@ -26,9 +26,7 @@ export const registerUser = async (req: Request, res: Response) => {
 }
 
 export const loginUser = async (req: Request, res: Response) => {
-
     const { email, password, } = req.body;
-
     try {
         let user = await users.findOne({ email })
         if (!user) {
