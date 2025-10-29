@@ -8,6 +8,7 @@ export const registerUser = async (req: Request, res: Response) => {
     console.log('Registering user with email:', email);
 
     try {
+        console.log('Checking for existing user...');
         let user = await users.findOne({ email })
         console.log('Existing user check:', user);
         if (user) {
@@ -29,7 +30,9 @@ export const registerUser = async (req: Request, res: Response) => {
 export const loginUser = async (req: Request, res: Response) => {
     const { email, password, } = req.body;
     try {
+        console.log('Checking for existing user...');
         let user = await users.findOne({ email })
+        console.log('User found:', user);
         if (!user) {
             return res.status(400).json({ success: false, message: "There is no regitered  users" })
         }
