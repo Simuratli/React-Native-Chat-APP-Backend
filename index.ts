@@ -12,7 +12,7 @@ app.use(express.json());
 app.use("/auth",authRoutes)
 
 app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.send("Server is running!");
 })
 
 const PORT = process.env.PORT || 3000;

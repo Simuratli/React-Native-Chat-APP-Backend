@@ -16,7 +16,7 @@ app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use("/auth", auth_routes_1.default);
 app.get("/", (req, res) => {
-    res.send("Server is running");
+    res.send("Server is running!");
 });
 const PORT = process.env.PORT || 3000;
 const server = http_1.default.createServer(app);
