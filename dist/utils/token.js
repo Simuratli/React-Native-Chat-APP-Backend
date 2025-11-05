@@ -12,7 +12,7 @@ const generateToken = (user) => {
         email: user.email,
         avatar: user.avatar
     };
-    return jsonwebtoken_1.default.sign(payload, process.env.JWT_SECRET, { expiresIn: "1m" });
+    return jsonwebtoken_1.default.sign(payload, process.env.JWT_SECRET, { expiresIn: "1y" });
 };
 exports.generateToken = generateToken;
 //# sourceMappingURL=token.js.map
