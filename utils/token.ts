@@ -8,5 +8,5 @@ export const generateToken = (user: UserProps) => {
         avatar: user.avatar
     }
 
-    return jwt.sign(payload, process.env.JWT_SECRET!, { expiresIn: "1m" })
+    return jwt.sign(payload, process.env.JWT_SECRET!, { expiresIn: "1y" })
 }
